@@ -9,7 +9,8 @@ COPY --from=busybox /bin/cat /bin/cat
 FROM caddy:2.8.4-builder AS builder
 
 RUN xcaddy build \
-    --with github.com/caddy-dns/cloudflare
+    --with github.com/caddy-dns/cloudflare \
+    --with github.com/greenpau/caddy-security
 
 FROM caddy:2.8.4
 
