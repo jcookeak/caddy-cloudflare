@@ -1,4 +1,4 @@
-FROM busybox:1.35.0-uclibc as busybox
+FROM busybox:1.37.0-uclibc as busybox
 
 FROM gcr.io/distroless/base-debian11
 
