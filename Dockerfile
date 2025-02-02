@@ -16,4 +16,5 @@ FROM caddy:2.9.1
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 COPY signal_handler.sh /
+RUN chmod +x signal_handler.sh
 CMD ["/signal_handler.sh", "caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
