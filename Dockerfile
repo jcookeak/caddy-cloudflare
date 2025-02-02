@@ -15,5 +15,5 @@ RUN xcaddy build \
 FROM caddy:2.9.1
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
-COPY signal-handler.sh /
-CMD ["/signal-handler.sh", "caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
+COPY signal_handler.sh /
+CMD ["/signal_handler.sh", "caddy", "run", "--config", "/etc/caddy/Caddyfile", "--adapter", "caddyfile"]
